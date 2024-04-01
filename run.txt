@@ -1,0 +1,53 @@
+
+
+* To create an user 
+python manage.py createsuperuser
+
+*user1 -> test1
+
+* Again create an new user
+python manage.py createsuperuser
+
+*user2 -> test2
+
+python manage.py runserver
+
+* to chat each other
+
+################################################
+browser1
+
+http://127.0.0.1:8000/admin
+
+userid: test1
+pass  : test1
+
+open new tab
+
+http://127.0.0.1:8000/chat/test2/
+
+
+################################################
+browser1
+
+http://127.0.0.1:8000/admin
+
+userid: test2
+pass  : test2
+
+open new tab
+
+http://127.0.0.1:8000/chat/test1/
+
+
+##################################################
+https://developer.redis.com/create/windows/
+
+sudo service redis-server restart
+
+redis-cli
+
+127.0.0.1:6379> set user:1 "name"
+127.0.0.1:6379> set user:2 "name"
+
+sudo service redis-server stop
